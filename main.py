@@ -14,10 +14,10 @@ with open(filePath) as data_file:
 
 # get input question from user
 question = input("Question: ")
-maxRatio = 0
-index = -1
 
 # find index of the most similar question with the user's question 
+maxRatio = 0
+index = -1
 for i in range(len(data)):
     currentRatio = getSimilarRatio(data[i]["question"], question)
     if currentRatio > maxRatio:
